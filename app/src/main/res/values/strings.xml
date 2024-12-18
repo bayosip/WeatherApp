@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="degrees">%1$d&#176;</string>
+    <string name="percentage">%1$d \%%</string>
+    <string name="humidity">Humidity</string>
+    <string name="uv">UV</string>
+    <string name="no_city_selected">No City Selected</string>
+    <string name="please_select_city">Please Search For A City</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="search">Search Location</string>
+    <string name="no_results">No Result for City</string>
+    <string name="city">%1$s, %2$s, %3$s</string>
+</resources>
