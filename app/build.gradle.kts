@@ -30,7 +30,7 @@ android {
         require(apiKey.isNotEmpty()) {
             "Register your api key from developer and place it in local.properties as `API_KEY`"
         }
-//        buildConfigField("String", "API_KEY", apiKey)
+        buildConfigField("String", "API_KEY", apiKey)
     }
 
     buildTypes {
@@ -51,6 +51,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"

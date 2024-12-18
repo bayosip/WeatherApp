@@ -1,6 +1,7 @@
 package com.nooro.weatherapp.domain.di
 
 import android.util.Log
+import com.nooro.weatherapp.BuildConfig
 import com.nooro.weatherapp.domain.local.LocalService
 import com.nooro.weatherapp.domain.model.DataToUIMapper
 import com.nooro.weatherapp.domain.network.ApiService
@@ -40,9 +41,10 @@ object ApiModule {
             .addInterceptor { chain ->
                 val request = chain.request().newBuilder()
                 val originalHttpUrl = chain.request().url
+
                 val url = originalHttpUrl.newBuilder().addQueryParameter(
                     "key",
-                    "c26c99604623486cae5130818241312"
+                    BuildConfig.API_KEY
                 ).build()
                 request.url(url)
                 val response = chain.proceed(request.build())
