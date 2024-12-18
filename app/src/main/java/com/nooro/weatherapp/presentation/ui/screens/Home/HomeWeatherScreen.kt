@@ -116,26 +116,27 @@ fun DotsIndicator(
     totalDots: Int,
     selectedIndex: Int,
     selectedColor: Color = Color.Black,
-    unSelectedColor: Color = text_color_normal,
+    unSelectedColor: Color = text_color_light,
 ) {
 
     LazyRow(
         modifier = modifier
-            .wrapContentSize()
+            .wrapContentSize(),
+        verticalAlignment = Alignment.CenterVertically
     ) {
 
         items(totalDots) { index ->
             if (index == selectedIndex) {
                 Box(
                     modifier = Modifier
-                        .size(Dimens.grid_0_75)
+                        .size(Dimens.grid_1_5)
                         .clip(CircleShape)
                         .background(selectedColor)
                 )
             } else {
                 Box(
                     modifier = Modifier
-                        .size(Dimens.grid_0_5)
+                        .size(Dimens.grid_1)
                         .clip(CircleShape)
                         .background(unSelectedColor)
                 )
