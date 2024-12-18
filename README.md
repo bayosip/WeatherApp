@@ -1,3 +1,4 @@
+![weather](https://github.com/user-attachments/assets/6e75e034-5b99-4b12-a667-eb25472f00b2)
 
 
 # Android Weather App
