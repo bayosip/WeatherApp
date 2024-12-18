@@ -71,9 +71,9 @@ class SearchScreenViewModel @Inject constructor(
     fun onSelect(city: String) {
         val list = _state.value.cityList
         if (list.size >= 5) {
-            list.removeFirst()
+            list.removeLast()
         }
-        list.add(city)
+        list.add(0, city)
         viewModelScope.launch(Dispatchers.IO) {
             updateSavedCitiesUseCase(changeListToJsonString(list))
         }
